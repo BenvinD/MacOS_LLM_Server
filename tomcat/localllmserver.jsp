@@ -8,14 +8,14 @@
 
     userInput = request.getParameter("query");
     selectedModel = request.getParameter("model"); // Get the selected model from the dropdown
-    String apiUrl = "http://benvin-18053.csez.zohocorpin.com:8080/v1/chat/completions"; 
+    String apiUrl = "http://localhost:8080/v1/chat/completions"; 
 
     if ("gpt2".equals(selectedModel)) {
-        apiUrl = "http://benvin-18053.csez.zohocorpin.com:8081/v1/chat/completions"; 
+        apiUrl = "http://localhost:8081/v1/chat/completions"; 
     } else if ("mistral".equals(selectedModel)) {
-        apiUrl = "http://benvin-18053.csez.zohocorpin.com:8082/v1/chat/completions"; 
+        apiUrl = "http://localhost:8082/v1/chat/completions"; 
     } else if ("gemma2".equals(selectedModel)) {
-        apiUrl = "http://benvin-18053.csez.zohocorpin.com:8083/v1/chat/completions"; 
+        apiUrl = "http://localhost:8083/v1/chat/completions"; 
     }
 
     HttpURLConnection connection = null;
